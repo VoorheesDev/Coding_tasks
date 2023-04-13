@@ -72,7 +72,7 @@ class BrickWall:
         if value is None:
             self.create_wall()
         else:
-            if not all(isinstance(brick_len, int) for row in wall for brick_len in row):
+            if not all(isinstance(brick_len, int) for row in value for brick_len in row):
                 raise TypeError("The wall must be list of lists of integers")
             self._wall = value
 
